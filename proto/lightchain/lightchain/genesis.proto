@@ -1,0 +1,12 @@
+syntax = "proto3";
+package lightchain.lightchain;
+
+import "gogoproto/gogo.proto";
+import "lightchain/lightchain/params.proto";
+
+option go_package = "lightchain/x/lightchain/types";
+
+// GenesisState defines the lightchain module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+}
